@@ -20,11 +20,10 @@ const director1: Director = {
 console.log(director1);
 
 
-function printTeacher(teacher: Teacher, subject?: string): void {
+function printTeacher(teacher: Teacher, subject?: string): string {
   const fullName = `${teacher.firstName} ${teacher.lastName}`;
-  if (subject) {
-    console.log(`Teacher: ${fullName}, Subject: ${subject}`);
-  } else {
-    console.log(`Teacher: ${fullName}`);
-  }
+  const result = subject ? `Teacher: ${fullName}, Subject: ${subject}` : `Teacher: ${fullName}`;
+  
+  console.log(result); 
+  return result;        
 }
