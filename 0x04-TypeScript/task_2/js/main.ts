@@ -151,11 +151,11 @@ console.log(executeWork(createEmployee(1000)));
 
 type Subjects = "Math" | "History";
 
-
 let todayClass: Subjects;
 
 
 todayClass = "Math";
+
 
 function teachClass(): string {
   if (todayClass === "Math") {
@@ -165,10 +165,8 @@ function teachClass(): string {
   }
 }
 
-console.log(teachClass()); 
 
+console.log(teachClass()); 
 
 todayClass = "History";
 console.log(teachClass()); 
-
-
