@@ -30,26 +30,11 @@ function printTeacher({ firstName, lastName }: { firstName: string; lastName: st
 
 console.log(printTeacher({ firstName: "John", lastName: "Doe" })); 
 
-
-interface StudentConstructor {
-  firstName: string;
-  lastName: string;
-}
-
-
-interface StudentInterface {
-  firstName: string;
-  lastName: string;
-  workOnHomework(): string;
-  displayName(): string;
-}
-
-
-class StudentClass implements StudentInterface {
+class StudentClass {
   firstName: string;
   lastName: string;
 
-  constructor({ firstName, lastName }: StudentConstructor) {
+  constructor(firstName: string, lastName: string) {
     this.firstName = firstName;
     this.lastName = lastName;
   }
@@ -64,6 +49,6 @@ class StudentClass implements StudentInterface {
 }
 
 
-const student = new StudentClass({ firstName: "Guillaume", lastName: "Salva" });
-console.log(student.displayName()); 
-console.log(student.workOnHomework()); 
+const student = new StudentClass("John", "Doe");
+console.log(student.displayName());      
+console.log(student.workOnHomework());   
