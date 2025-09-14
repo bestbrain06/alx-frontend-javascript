@@ -28,13 +28,14 @@ function printTeacher({ firstName, lastName }: { firstName: string; lastName: st
   return `${firstName}. ${lastName}`;
 }
 
-console.log(printTeacher({ firstName: "John", lastName: "Doe" })); // J. Doe
+console.log(printTeacher({ firstName: "John", lastName: "Doe" })); 
 
 
 interface StudentConstructor {
   firstName: string;
   lastName: string;
 }
+
 
 interface StudentInterface {
   firstName: string;
@@ -64,6 +65,5 @@ class StudentClass implements StudentInterface {
 
 
 const student = new StudentClass({ firstName: "Guillaume", lastName: "Salva" });
-
 console.log(student.displayName()); 
 console.log(student.workOnHomework()); 
