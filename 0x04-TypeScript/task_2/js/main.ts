@@ -134,20 +134,18 @@ console.log(createEmployee(1000));
 console.log(createEmployee("$500")); 
 
 
-
 type Subjects = 'Math' | 'History';
 
 
+const teachingMessages: Record<Subjects, string> = {
+  Math: 'Teaching Math',
+  History: 'Teaching History'
+};
+
+
 function teachClass(todayClass: Subjects): string {
-    if (todayClass === 'Math') {
-        return 'Teaching Math';
-    } else {
-        return 'Teaching History';
-    }
+  return teachingMessages[todayClass];
 }
 
-
-console.log(teachClass('Math'));   
+console.log(teachClass('Math'));     
 console.log(teachClass('History'));  
-console.log(teachClass('Math'));    
-console.log(teachClass('History')); 
