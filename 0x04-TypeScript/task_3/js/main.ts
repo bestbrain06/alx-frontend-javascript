@@ -1,22 +1,17 @@
 
-import { RowID, RowElement } from "./interface";
-import * as CRUD from "./crud";
+import { RowID, RowElement } from './interface';
+import * as CRUD from './crud.js';
 
-// Create an object of type RowElement
 const row: RowElement = {
   firstName: "Guillaume",
-  lastName: "Salva",
+  lastName: "Salva"
 };
 
-// Insert row and store ID
+
 const newRowID: RowID = CRUD.insertRow(row);
 
-// Update the row with age
-const updatedRow: RowElement = {
-  firstName: "Guillaume",
-  lastName: "Salva",
-  age: 23,
-};
+
+const updatedRow: RowElement = { ...row, age: 23 };
 
 CRUD.updateRow(newRowID, updatedRow);
 CRUD.deleteRow(newRowID);
