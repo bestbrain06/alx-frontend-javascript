@@ -20,17 +20,11 @@ const director1: Director = {
 console.log(director1);
 
 
-interface printTeacherFunction {
-  (firstName: string, lastName: string): string;
+function printTeacher(teacher: Teacher, subject?: string): void {
+  const fullName = `${teacher.firstName} ${teacher.lastName}`;
+  if (subject) {
+    console.log(`Teacher: ${fullName}, Subject: ${subject}`);
+  } else {
+    console.log(`Teacher: ${fullName}`);
+  }
 }
-
-
-const printTeacher: printTeacherFunction = (firstName, lastName) => {
-  return `${firstName.charAt(0)}. ${lastName}`;
-};
-
-console.log(printTeacher("John", "Doe")); 
-console.log(printTeacher("Alice", "Smith")); 
-
-
-
