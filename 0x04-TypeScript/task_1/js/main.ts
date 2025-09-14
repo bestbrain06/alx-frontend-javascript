@@ -20,25 +20,15 @@ const director1: Director = {
 console.log(director1);
 
 
-// Old function for full Teacher object
-function printFullTeacher(teacher: Teacher, subject?: string): string {
-  const fullName = `${teacher.firstName} ${teacher.lastName}`;
-  const result = subject ? `Teacher: ${fullName}, Subject: ${subject}` : `Teacher: ${fullName}`;
-  
-  console.log(result); 
-  return result;        
-}
 
-
-interface PrintTeacherFunction {
+interface printTeacherFunction {
   (firstName: string, lastName: string): string;
 }
 
 
-const printTeacher: PrintTeacherFunction = (firstName, lastName) => {
+const printTeacher: printTeacherFunction = (firstName, lastName) => {
   return `${firstName[0]}. ${lastName}`;
 };
 
 
-console.log(printTeacher("John", "Doe"));       
-
+console.log(printTeacher("John", "Doe"));
