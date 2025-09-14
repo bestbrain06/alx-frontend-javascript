@@ -133,6 +133,8 @@ console.log(createEmployee(200));
 console.log(createEmployee(1000));  
 console.log(createEmployee("$500")); 
 
+
+
 function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
@@ -148,25 +150,3 @@ function executeWork(employee: Director | Teacher): string {
 console.log(executeWork(createEmployee(200))); 
 console.log(executeWork(createEmployee(1000))); 
 
-
-type Subjects = "Math" | "History";
-
-let todayClass: Subjects;
-
-
-todayClass = "Math";
-
-
-function teachClass(): string {
-  if (todayClass === "Math") {
-    return "Teaching Math";
-  } else if (todayClass === "History") {
-    return "Teaching History";
-  }
-}
-
-
-console.log(teachClass()); 
-
-todayClass = "History";
-console.log(teachClass()); 
