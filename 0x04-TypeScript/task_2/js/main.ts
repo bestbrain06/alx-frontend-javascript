@@ -150,6 +150,9 @@ console.log(executeWork(createEmployee(1000)));
 
 
 type Subjects = "Math" | "History";
+
+let todayClass: Subjects;
+
 function teachClass(todayClass: Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
