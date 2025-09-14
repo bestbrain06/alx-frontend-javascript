@@ -159,7 +159,6 @@ function teachClass(todayClass: Subjects): string {
   } else if (todayClass === "History") {
     return "Teaching History";
   }
-
 }
 console.log(teachClass("Math"));    
 console.log(teachClass("History")); 
