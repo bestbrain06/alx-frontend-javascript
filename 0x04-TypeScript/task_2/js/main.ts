@@ -147,5 +147,7 @@ function teachClass(todayClass: Subjects): string {
 }
 
 
+console.log(teachClass('Math'));   
+console.log(teachClass('History'));  
 console.log(teachClass('Math'));    
 console.log(teachClass('History')); 
