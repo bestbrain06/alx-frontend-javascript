@@ -1,4 +1,3 @@
-
 interface DirectorInterface {
   workFromHome(): string;
   getCoffeeBreak(): string;
@@ -52,8 +51,9 @@ console.log(createEmployee("$500"));
 
 type Subjects = "Math" | "History";
 
-function teachClass(todayClass: Subjects): string {
-  return todayClass === "Math" ? "Teaching Math" : "Teaching History";
+function teachClass(todayClass:Subjects):string {
+    if (todayClass==="Math") return "Teaching Math";
+    return "Teaching History";
 }
 
 console.log(teachClass("Math"));
