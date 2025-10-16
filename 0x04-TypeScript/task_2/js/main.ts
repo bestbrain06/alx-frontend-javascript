@@ -53,15 +53,13 @@ let Subjects: "Math" | "History";
 
 type Subjects= "Math" | "History";
 
-function teachClass(todayClass: Subjects):string {
+
+function teachClass(todayClass: Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   }
-  if (todayClass === "History") {
-    return "Teaching History";
-  }
 
-  return ''
+  return "Teaching History";
 }
 
 console.log(teachClass("Math"));
