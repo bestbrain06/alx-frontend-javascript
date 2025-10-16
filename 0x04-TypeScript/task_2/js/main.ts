@@ -49,6 +49,7 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee("$500"));
+let Subjects: "Math" | "History";
 
 function teachClass(todayClass: string) {
   if (todayClass === "Math") {
