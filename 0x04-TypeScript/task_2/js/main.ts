@@ -49,16 +49,11 @@ function createEmployee(salary: number | string): Director | Teacher {
 console.log(createEmployee(200));
 console.log(createEmployee(1000));
 console.log(createEmployee("$500"));
-let Subjects: "Math" | "History";
 
 type Subjects = "Math" | "History";
 
-function teachClass(todayClass: Subjects){
-  if (todayClass === "Math") {
-    return "Teaching Math";
-  } else {
-    return "Teaching History";
-  }
+function teachClass(todayClass: Subjects): string {
+  return todayClass === "Math" ? "Teaching Math" : "Teaching History";
 }
 
 console.log(teachClass("Math"));
