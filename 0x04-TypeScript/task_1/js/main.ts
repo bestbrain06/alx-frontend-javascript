@@ -43,16 +43,16 @@ class StudentClass {
   lastName: string;
 
   constructor(firstName: string, lastName: string) {
-    (this.firstName = firstName), (this.lastName = lastName);
+    this.firstName = firstName;
+    this.lastName = lastName;
   }
 
-
-  workOnHomework():string {
+  workOnHomework(): string {
     return "Currently working";
   }
 
-  displayName():string {
-    return `${this.firstName}`;
+  displayName(): string {
+    return this.firstName;
   }
 }
 
