@@ -51,13 +51,17 @@ console.log(createEmployee(1000));
 console.log(createEmployee("$500"));
 let Subjects: "Math" | "History";
 
-function teachClass(todayClass: Subjects) {
+type Subjects= "Math" | "History";
+
+function teachClass(todayClass: Subjects):string {
   if (todayClass === "Math") {
     return "Teaching Math";
   }
   if (todayClass === "History") {
     return "Teaching History";
   }
+
+  return ''
 }
 
 console.log(teachClass("Math"));
